@@ -16,6 +16,7 @@
 
 html{
   scroll-behavior:smooth;
+  font-size:100%;
 }
 
 body{
@@ -24,6 +25,8 @@ body{
   background:var(--bg);
   color:var(--text);
   overflow-x:hidden;
+  font-size:1rem; /* 16px minimum */
+  line-height:1.6;
 }
 
 button,input,select,textarea{
@@ -42,19 +45,20 @@ h1{
   font-family:'Great Vibes',cursive;
   font-size:clamp(3rem,5vw,5rem);
   letter-spacing:.02em;
-  color:var(--text);
+  color:var(--heading);
 }
 
 h2{
   font-family:'Cormorant Garamond',serif;
   font-size:clamp(2rem,2.8vw,3rem);
   line-height:1.05;
-  color:var(--text);
+  color:var(--heading);
 }
 
 p{
   color:var(--muted);
-  line-height:1.8;
+  line-height:1.7;
+  font-size:1rem; /* 16px */
 }
 
 #loader{
@@ -164,12 +168,14 @@ p{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  padding:.95rem 1.8rem;
   border-radius:999px;
   border:none;
-  min-width:180px;
   text-decoration:none;
   cursor:pointer;
+  min-height:44px;
+  min-width:44px;
+  padding:0.75rem 1.5rem;
+  text-align:center;
   transition:transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease, border-color .25s ease;
 }
 
@@ -564,16 +570,19 @@ p{
 .footer small,
 .footer span{
   color:#111;
+  
 }
 
 .footer p{
   margin-bottom:12px;
+  font-size:1rem;
 }
 
 .footer small{
   margin-top:20px;
   display:block;
   color:#666;
+  font-size:1rem;
 }
 
 .footer-verse{
@@ -585,31 +594,31 @@ p{
 }
 
 .monogram-circle{
-  width:180px;
-  height:180px;
+  width:150px;
+  height:150px;
   border:2px solid rgba(255,255,255,.9);
   border-radius:50%;
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:12px;
-  margin:0 auto 30px;
+  gap:10px;
+  margin:0 auto 10px;
 }
 
 .monogram-circle span{
   color:#fff;
-  font-size:60px;
+  font-size:50px;
   font-weight:700;
 }
 
 .monogram-circle .heart{
   color:#fff;
-  font-size:28px;
+  font-size:24px;
 }
 
 .loader-card h2{
   color:#fff;
-  margin:20px 0 10px;
+  margin:0 0 10px;
   width:100%;
   text-align:center;
 }
@@ -620,7 +629,7 @@ p{
   text-transform:uppercase;
   text-align:center;
   width: 100%;
-  margin-bottom: 30px;
+  margin:0 0 10px;
 }
 
 .loader-text{
@@ -745,4 +754,18 @@ p{
 .open-section .primary-btn{
   margin:0 auto;
   display:inline-flex;
+  min-height:44px;
+  min-width:180px;
 }
+.rsvp-form button[type="submit"]{
+  min-height:44px;
+  min-width:44px;
+  padding:0.75rem 1.5rem;
+}
+.rsvp-form label,
+.rsvp-form input,
+.rsvp-form select,
+.rsvp-form textarea{
+  font-size:1rem; /* 16px */
+}
+

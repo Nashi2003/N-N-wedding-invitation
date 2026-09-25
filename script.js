@@ -102,3 +102,27 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.15 });
 
 document.querySelectorAll('.section').forEach((section) => observer.observe(section));
+const shareBtn = document.getElementById('shareBtn');
+
+shareBtn?.addEventListener('click', async () => {
+  const shareData = {
+    title: 'Nadeem & Nashida | Wedding Invitation',
+    text: "You're warmly invited to Nadeem & Nashida's Wedding 🤍💍",
+    url: window.location.href
+  };
+
+  if (navigator.share) {
+    try {
+      await navigator.share(shareData);
+    } catch (error) {
+      // User cancelled the share menu
+    }
+  } else {
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      alert('Invitation link copied! 🤍');
+    } catch (error) {
+      alert('Please copy the invitation link and share it. 🤍');
+    }
+  }
+});
