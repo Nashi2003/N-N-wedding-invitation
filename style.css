@@ -836,4 +836,59 @@ p{
   transform:translateY(-2px);
   box-shadow:0 6px 18px rgba(200,169,106,.4);
 }
+.countdown-grid{
+  display:flex;
+  flex-wrap:nowrap;
+  justify-content:center;
+  align-items:center;
+  gap:12px;
+  margin-top:2rem;
+}
+
+.countdown-grid div{
+  background:#111;
+  border:1px solid rgba(200,169,106,.35);
+  color:#fff;
+  border-radius:18px;
+  padding:1rem .75rem;
+  min-width:0;
+  flex:1;
+  max-width:120px;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.countdown-grid span{
+  display:block;
+  color:#fff;
+  font-size:2.5rem;
+  line-height:1;
+}
+
+.countdown-grid small{
+  display:block;
+  margin-top:.5rem;
+  color:rgba(255,255,255,.72);
+  letter-spacing:.09em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+@media (max-width:640px){
+  .countdown-grid{
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  .countdown-grid div{
+    flex:0 0 calc(50% - 5px);
+    min-width:0;
+    padding:.75rem .5rem;
+  }
+
+  .countdown-grid span{
+    font-size:2rem;
+  }
+}
 
