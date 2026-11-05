@@ -1,4 +1,4 @@
-const openBtn = document.getElementById('openBtn');
+
 const loader = document.getElementById('loader');
 const rsvpForm = document.getElementById('rsvpForm');
 const formMessage = document.getElementById('formMessage');
@@ -13,15 +13,11 @@ const countdownMessage = document.getElementById('countdownMessage');
 const enterBtn = document.getElementById('enterBtn');
 const invitationContent = document.getElementById('invitationContent');
 
-function hideLoader() {
-  loader.classList.add('hide');
-}
-
-function scrollToInvitation() {
+function openInvitation() {
   invitationContent.style.display = 'block';
-  setTimeout(() => {
-    document.getElementById('details').scrollIntoView({ behavior: 'smooth' });
-  }, 100);
+  loader.classList.add('hide');
+
+  window.scrollTo(0, 0);
 }
 
 function updateCountdown() {
@@ -89,8 +85,7 @@ window.addEventListener('load', () => {
   setInterval(updateCountdown, 1000);
 });
 
-openBtn?.addEventListener('click', scrollToInvitation);
-enterBtn?.addEventListener('click', hideLoader);
+enterBtn?.addEventListener('click', openInvitation);
 rsvpForm?.addEventListener('submit', handleRsvpSubmit);
 
 const observer = new IntersectionObserver((entries) => {

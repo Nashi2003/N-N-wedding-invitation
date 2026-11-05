@@ -8,18 +8,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap"
+    rel="stylesheet">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap"
+    rel="stylesheet" >
 </head>
 <body>
     <div id="loader">
         <div class="loader-card">
-            <div class="monogram-circle">
-                <span>N</span>
-                <span class="heart">&</span>
-                <span>N</span>
-            </div>
-            <h2>Nadeem & Nashida</h2>
+            <div class="loader-monogram" aria-label="Nashida and Nadeem">
+    <div class="monogram-letters" aria-hidden="true">
+    <span class="monogram-initial">N</span>
+    <span class="monogram-ampersand">&amp;</span>
+    <span class="monogram-initial">N</span>
+</div>
+
+    
+    <p class="monogram-date">13.12.2026</p>
+    <p class="monogram-names">Nadeem &amp; Nashida</p>
+</div>
+            
             <p class="loader-title">Wedding Invitation</p>
-            <button class="primary-btn" id="enterBtn">Enter</button>
+            <button class="primary-btn" id="enterBtn">Open Invitation</button>
         </div>
     </div>
 
@@ -31,66 +43,12 @@
     </div>
 
     <main>
-        <section class="hero" id="hero">
-            <div class="hero-overlay"></div>
-            <div class="hero-bg">
-                <img src="hero2.webp" alt="Couple">
-            </div>
-            <div class="hero-card">
-                <h1 class="bride">Nashida</h1>
-                <div class="and">&</div>
-                <h1 class="groom">Nadeem Shad</h1>
-                <p class="hero-subtitle">
-                    Together with our families,<br>
-                    request the honour of your presence at our Wedding.
-                </p>
-                <div class="hero-details">
-                    <div>
-                        <span>📆</span>
-                        <strong>13 December 2026</strong>
-                    </div>
-                    <div>
-                        <span>🕚</span>
-                        <strong>12:00 AM</strong>
-                    </div>
-                    <div>
-                        <span>📍</span>
-                        <strong>Galaxy Convention Center</strong>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="open-section">
-            <button class="primary-btn" id="openBtn">Open Invitation</button>
-        </section>
+        
 
         <div id="invitationContent">
 
-            <section class="section details" id="details">
-                <div class="section-inner">
-                    <div class="detail-card shimmer-card">
-                        <h2>Our Ceremony</h2>
-                        <p>An elegant union of two hearts, grounded in faith and surrounded by family. Please join us for a day of gratitude, celebration, and dua.</p>
-                    </div>
-                </div>
-            </section>
 
-            <section class="section countdown" id="countdown">
-                <div class="section-inner countdown-card">
-                    <p class="section-label">Live Countdown</p>
-                    <h2>Our Wedding Day Awaits</h2>
-                    <div class="countdown-grid">
-                        <div><span id="days">00</span><small>Days</small></div>
-                        <div><span id="hours">00</span><small>Hours</small></div>
-                        <div><span id="minutes">00</span><small>Minutes</small></div>
-                        <div><span id="seconds">00</span><small>Seconds</small></div>
-                    </div>
-                    <p id="countdownMessage"></p>
-                </div>
-            </section>
-
-            <section class="section invitation-text">
+        <section class="section invitation-text">
                 <div class="section-inner">
                     <p class="section-label">Invitation</p>
                     <h2>
@@ -106,24 +64,6 @@
                 </div>
             </section>
 
-            <!-- Gallery first -->
-            <section class="section gallery" id="gallery">
-                <div class="section-inner">
-                    <p class="section-label">Photo Gallery</p>
-                    <h2>Moments to Remember</h2>
-                    <div class="gallery-grid">
-                        <div class="gallery-card">
-                            <img src="hero.webp" alt="Couple">
-                        </div>
-                        <div class="gallery-card">
-                            <img src="groom.webp" alt="Bride">
-                        </div>
-                        <div class="gallery-card">
-                            <img src="bride.webp" alt="Groom">
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             <!-- Venue next -->
             <section class="section venue" id="venue">
@@ -147,6 +87,43 @@
     </div>
 </section>
 
+
+            <section class="section countdown" id="countdown">
+                <div class="section-inner countdown-card">
+                    <p class="section-label">Live Countdown</p>
+                    <h2>Our Wedding Day Awaits</h2>
+                    <div class="countdown-grid">
+                        <div><span id="days">00</span><small>Days</small></div>
+                        <div><span id="hours">00</span><small>Hours</small></div>
+                        <div><span id="minutes">00</span><small>Minutes</small></div>
+                        <div><span id="seconds">00</span><small>Seconds</small></div>
+                    </div>
+                    <p id="countdownMessage"></p>
+                </div>
+            </section>
+
+
+            <!-- Gallery first -->
+            <section class="section gallery" id="gallery">
+                <div class="section-inner">
+                    <p class="section-label">Photo Gallery</p>
+                    <h2>Moments to Remember</h2>
+                    <div class="gallery-grid">
+                        <div class="gallery-card">
+                            <img src="hero.webp" alt="Couple">
+                        </div>
+                        <div class="gallery-card">
+                            <img src="groom.webp" alt="Bride">
+                        </div>
+                        <div class="gallery-card">
+                            <img src="bride.webp" alt="Groom">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        
+
             <section class="section rsvp" id="rsvp">
                 <div class="section-inner grid-2">
                     <div class="rsvp-copy">
@@ -162,10 +139,12 @@
                         <label>
                             <span>Attendance</span>
                             <select id="rsvpStatus" required>
-                                <option value="">Select an option</option>
-                                <option>Attending</option>
-                                <option>Regrets</option>
-                            </select>
+    <option value="" disabled selected hidden>
+        Select an option
+    </option>
+    <option value="Attending">Attending</option>
+    <option value="Regrets">Regrets</option>
+</select>
                         </label>
                         <label>
                             <span>Number of Guests</span>
@@ -175,7 +154,7 @@
                             <span>Message</span>
                             <textarea id="rsvpMessage" rows="4" placeholder="Your warm wishes..."></textarea>
                         </label>
-                        <button type="submit" class="primary-btn">Send RSVP</button>
+                        <button type="submit" class="secondary-btn">Send RSVP</button>
                         <p class="form-note" id="formMessage"></p>
                     </form>
                 </div>
